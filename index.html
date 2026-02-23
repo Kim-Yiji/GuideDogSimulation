@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🐕 가이드독 매너 시뮬레이터</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<!-- ============ INTRO SCREEN ============ -->
+<div id="screen-intro" class="screen active">
+  <div class="intro-wrap">
+    <div class="intro-badge">🐾 매너 시뮬레이터</div>
+    <h1 class="intro-title">가이드독<br/><span>매너 체크!</span></h1>
+    <p class="intro-sub">공공장소에서 안내견을 만났을 때<br/>내 행동이 매너인지 바로 확인해봐 🐕</p>
+
+    <div class="scene-preview">
+      <div class="scene-dog">
+        <div class="dog-body">
+          <div class="dog-svg">
+            <!-- SVG Dog -->
+            <svg viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg">
+              <!-- 몸통 -->
+              <ellipse cx="60" cy="65" rx="30" ry="22" fill="#C8924A"/>
+              <!-- 목 -->
+              <rect x="50" y="42" width="20" height="18" rx="6" fill="#C8924A"/>
+              <!-- 머리 -->
+              <ellipse cx="60" cy="36" rx="20" ry="18" fill="#D4A055"/>
+              <!-- 귀 왼쪽 -->
+              <ellipse cx="43" cy="28" rx="9" ry="13" fill="#A0622A" transform="rotate(-15 43 28)"/>
+              <!-- 귀 오른쪽 -->
+              <ellipse cx="77" cy="28" rx="9" ry="13" fill="#A0622A" transform="rotate(15 77 28)"/>
+              <!-- 눈 왼쪽 -->
+              <circle cx="53" cy="33" r="4" fill="#fff"/>
+              <circle cx="54" cy="33" r="2.5" fill="#2c1a0e"/>
+              <circle cx="55" cy="32" r="0.8" fill="#fff"/>
+              <!-- 눈 오른쪽 -->
+              <circle cx="67" cy="33" r="4" fill="#fff"/>
+              <circle cx="68" cy="33" r="2.5" fill="#2c1a0e"/>
+              <circle cx="69" cy="32" r="0.8" fill="#fff"/>
+              <!-- 코 -->
+              <ellipse cx="60" cy="41" rx="5" ry="3.5" fill="#2c1a0e"/>
+              <ellipse cx="59" cy="40" rx="1.5" ry="1" fill="#4a3020" opacity="0.5"/>
+              <!-- 입 -->
+              <path d="M55 44 Q60 48 65 44" stroke="#2c1a0e" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+              <!-- 혀 -->
+              <ellipse cx="60" cy="47" rx="4" ry="3" fill="#E06080"/>
+              <!-- 조끼 (안내견 하네스) -->
+              <rect x="35" y="52" width="50" height="22" rx="5" fill="#2563EB" opacity="0.85"/>
+              <text x="60" y="66" text-anchor="middle" fill="white" font-size="8" font-weight="bold">안내견</text>
+              <!-- 앞다리 -->
+              <rect x="38" y="80" width="10" height="18" rx="5" fill="#C8924A"/>
+              <rect x="72" y="80" width="10" height="18" rx="5" fill="#C8924A"/>
+              <!-- 뒷다리 -->
+              <rect x="32" y="78" width="11" height="16" rx="5" fill="#A0622A"/>
+              <rect x="77" y="78" width="11" height="16" rx="5" fill="#A0622A"/>
+              <!-- 꼬리 -->
+              <path d="M90 58 Q110 40 105 55" stroke="#C8924A" stroke-width="7" fill="none" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="scene-person">
+        <svg viewBox="0 0 80 130" xmlns="http://www.w3.org/2000/svg">
+          <!-- 그림자 -->
+          <ellipse cx="40" cy="128" rx="25" ry="5" fill="#00000015"/>
+          <!-- 다리 -->
+          <rect x="28" y="88" width="10" height="35" rx="5" fill="#3B4B6B"/>
+          <rect x="42" y="92" width="10" height="31" rx="5" fill="#3B4B6B"/>
+          <!-- 신발 -->
+          <ellipse cx="33" cy="122" rx="8" ry="4" fill="#222"/>
+          <ellipse cx="47" cy="122" rx="8" ry="4" fill="#222"/>
+          <!-- 몸통 -->
+          <rect x="22" y="50" width="36" height="42" rx="10" fill="#5B7FD4"/>
+          <!-- 팔 -->
+          <path d="M22 60 Q8 72 14 82" stroke="#5B7FD4" stroke-width="10" fill="none" stroke-linecap="round"/>
+          <path d="M58 60 Q72 70 68 82" stroke="#5B7FD4" stroke-width="10" fill="none" stroke-linecap="round"/>
+          <!-- 흰지팡이 -->
+          <line x1="14" y1="82" x2="10" y2="125" stroke="white" stroke-width="3" stroke-linecap="round"/>
+          <!-- 목 -->
+          <rect x="34" y="38" width="12" height="14" rx="5" fill="#F0C090"/>
+          <!-- 머리 -->
+          <circle cx="40" cy="30" r="18" fill="#F0C090"/>
+          <!-- 머리카락 -->
+          <ellipse cx="40" cy="14" rx="18" ry="9" fill="#2c1a0e"/>
+          <ellipse cx="25" cy="24" rx="6" ry="10" fill="#2c1a0e"/>
+          <ellipse cx="55" cy="24" rx="6" ry="10" fill="#2c1a0e"/>
+          <!-- 눈 (선글라스) -->
+          <rect x="28" y="27" width="10" height="7" rx="3" fill="#222"/>
+          <rect x="42" y="27" width="10" height="7" rx="3" fill="#222"/>
+          <line x1="38" y1="30" x2="42" y2="30" stroke="#555" stroke-width="1.5"/>
+          <!-- 입 (미소) -->
+          <path d="M34 38 Q40 43 46 38" stroke="#c0795a" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        </svg>
+      </div>
+
+      <!-- 하네스 줄 -->
+      <div class="harness-line"></div>
+    </div>
+
+    <div class="info-chips">
+      <span class="chip">📋 8문항</span>
+      <span class="chip">⏱ 2~3분</span>
+      <span class="chip">🏆 칭호 획득</span>
+    </div>
+
+    <button class="btn-start" onclick="startGame()">
+      시작하기 🐾
+    </button>
+    <p class="intro-note">안내견에 대해 얼마나 알고 있을까?</p>
+  </div>
+</div>
+
+<!-- ============ GAME SCREEN ============ -->
+<div id="screen-game" class="screen">
+  <div class="game-wrap">
+
+    <!-- 상단 HUD -->
+    <div class="hud">
+      <div class="hud-left">
+        <span class="stage-badge" id="stage-badge">STAGE 1</span>
+      </div>
+      <div class="hud-center">
+        <div class="progress-bar-wrap">
+          <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        <div class="stage-dots" id="stage-dots"></div>
+      </div>
+      <div class="hud-right">
+        <span class="score-box">🐾 <span id="score-display">0</span>점</span>
+      </div>
+    </div>
+
+    <!-- 상황 카드 -->
+    <div class="situation-card" id="situation-card">
+      <div class="situation-scene" id="situation-scene"></div>
+      <div class="situation-text" id="situation-text"></div>
+    </div>
+
+    <!-- 질문 -->
+    <div class="question-wrap">
+      <p class="question-label">Q. 어떻게 할까?</p>
+      <p class="question-text" id="question-text"></p>
+    </div>
+
+    <!-- 선택지 -->
+    <div class="choices" id="choices"></div>
+
+    <!-- 피드백 -->
+    <div class="feedback-box" id="feedback-box" style="display:none">
+      <div class="feedback-icon" id="feedback-icon"></div>
+      <div class="feedback-content">
+        <p class="feedback-main" id="feedback-main"></p>
+        <p class="feedback-alt" id="feedback-alt"></p>
+      </div>
+      <button class="btn-next" id="btn-next" onclick="nextStage()">다음 →</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- ============ RESULT SCREEN ============ -->
+<div id="screen-result" class="screen">
+  <div class="result-wrap">
+    <div class="result-dog" id="result-dog"></div>
+    <div class="result-badge" id="result-badge"></div>
+    <h2 class="result-title" id="result-title"></h2>
+    <p class="result-sub" id="result-sub"></p>
+    <div class="score-circle">
+      <span id="result-score">0</span>
+      <small>/80점</small>
+    </div>
+    <div class="result-breakdown" id="result-breakdown"></div>
+    <div class="result-summary" id="result-summary"></div>
+    <div class="result-btns">
+      <button class="btn-retry" onclick="retryGame()">🔄 다시하기</button>
+      <button class="btn-review" onclick="showReview()">📝 오답 복습</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ REVIEW SCREEN ============ -->
+<div id="screen-review" class="screen">
+  <div class="review-wrap">
+    <h2 class="review-title">📝 오답 복습</h2>
+    <p class="review-sub">틀린 문제를 다시 확인해봐!</p>
+    <div class="review-list" id="review-list"></div>
+    <button class="btn-back" onclick="backToResult()">← 결과로 돌아가기</button>
+  </div>
+</div>
+
+<script src="js/scenes.js"></script>
+<script src="js/game.js"></script>
+</body>
+</html>
