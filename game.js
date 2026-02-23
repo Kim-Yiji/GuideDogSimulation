@@ -44,7 +44,7 @@ const STAGES = [
     situation: '공원에서 안내견과 핸들러를 만났어. 주머니에 강아지 간식이 있었는데, 안내견이 너무 귀여워서 주고 싶어졌어.',
     question: '안내견에게 "절대 하면 안 되는" 건?',
     choices: [
-      { text: '(허락받고) 잠깐 쓰다듬기', correct: false },
+      { text: '길/공간을 비켜줘서 지나가기 쉽게 해주기', correct: false },
       { text: '음식/간식 주기', correct: true },
       { text: '안내견과 함께 병원에 가는 핸들러 응대하기', correct: false },
       { text: '자연스럽게 지나치기', correct: false },
